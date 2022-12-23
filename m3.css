@@ -1,0 +1,46 @@
+/* Define the style for the boxes */
+.box {
+    display: inline-block; /* Display the boxes horizontally */
+    width: 300px; /* Set the width of the boxes */
+    height: 300px; /* Set the height of the boxes */
+    position: relative; /* Set the position to relative, so we can position the text overlay */
+    overflow: hidden; /* Hide any overflow from the text overlay */
+    border: 5px solid peachpuff; /* Set border and color */
+    border-radius: 5px; /* Set corners of the border to curve */
+    margin: 50px; /* Add margin between the boxes */
+    font-size: 4.5em; /* Increase font size */
+  }
+
+/* Define the style for the .gifs in the boxes */
+  .box img {
+    width: 300px; /* Set the size of the images in the boxes */
+    height: 300px;
+    border-radius: 5px; /* Set corners of the border to curve */
+  }
+  
+  
+  /* Define the style for the text overlay */
+  .box .overlay {
+    position: absolute; /* Set the position to absolute, so it is positioned relative to the parent box element */
+    top: 0; /* Position the overlay at the top of the box */
+    width: 100%; /* Make the overlay as wide as the box */
+    height: 100%; /* Make the overlay as tall as the box */
+    background-color: rgba(0,0,0,0.75); /* Give the overlay a semi-transparent black background color */
+    color: white; /* Set the text color to white */
+    text-align: center; /* Center the text within the overlay */
+    display: flex; /* Display the text as a flex container */
+    align-items: center; /* Align the text vertically within the overlay */
+    justify-content: center; /* Center the text horizontally within the overlay */
+    visibility: hidden; /* Hide the text overlay by default */
+    transition: transform 0.5s ease-out; /* Set a transition for the transform property, so the text rolls up smoothly when the box is hovered over */
+    transform: translateY(100%); /* Set the initial position of the text overlay, so it is fully off the screen */
+    border-radius: 5px;
+  }
+  
+  /* Show the text overlay when the box is hovered over */
+  .box:hover .overlay {
+    visibility: visible; /* Make the text overlay visible */
+    opacity: 1; /* Set the opacity to fully opaque */
+    transform: translateY(0);
+  }
+  

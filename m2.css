@@ -1,0 +1,32 @@
+.meme {
+    width: 30%;
+    margin: auto;
+    border: 1px solid grey;
+    border-radius: 8px;
+    box-shadow: 0 2px darkgrey;
+}
+
+.image {
+    background-image: url("https://cdn.shopify.com/s/files/1/2195/6819/files/Screen_Shot_2020-04-14_at_3.46.02_PM_large.png?v=1586854010");
+    padding-top: 100%;
+    background-size: cover;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: bolder;
+    padding: 10px;
+    background-color: lightgrey;
+    border: 2px solid lightgrey;
+    border-bottom: 1px solid grey;
+
+}
+
+.description {
+    background-color: lightgrey;
+    padding: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
