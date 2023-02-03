@@ -1,0 +1,28 @@
+(base) MacBook-Pro:terminal bobtenuta$ mkdir first
+(base) MacBook-Pro:terminal bobtenuta$ ls
+first
+(base) MacBook-Pro:terminal bobtenuta$ cd first
+(base) MacBook-Pro:first bobtenuta$ touch person.text
+(base) MacBook-Pro:first bobtenuta$ mv person.text another.txt
+(base) MacBook-Pro:first bobtenuta$ ls
+another.txt
+(base) MacBook-Pro:first bobtenuta$ cp another.txt copy.txt
+(base) MacBook-Pro:first bobtenuta$ ls
+another.txt	copy.txt
+(base) MacBook-Pro:first bobtenuta$ rm copy.txt
+(base) MacBook-Pro:first bobtenuta$ ls
+another.txt
+(base) MacBook-Pro:first bobtenuta$ cp first second
+cp: first: No such file or directory
+(base) MacBook-Pro:first bobtenuta$ cd ..
+(base) MacBook-Pro:terminal bobtenuta$ cp first second
+cp: first is a directory (not copied).
+(base) MacBook-Pro:terminal bobtenuta$ cp -r first second
+(base) MacBook-Pro:terminal bobtenuta$ ls
+first	second
+(base) MacBook-Pro:terminal bobtenuta$ rmdir second
+rmdir: second: Directory not empty
+(base) MacBook-Pro:terminal bobtenuta$ rm -rf second
+(base) MacBook-Pro:terminal bobtenuta$ ls
+first
+(base) MacBook-Pro:terminal bobtenuta$ 
