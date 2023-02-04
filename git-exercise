@@ -1,0 +1,183 @@
+(base) bobtenuta@MacBook-Pro terminal % cd ~
+(base) bobtenuta@MacBook-Pro ~ % cd /users/bobtenuta/softwarebootcamp/terminal
+cd: no such file or directory: /users/bobtenuta/softwarebootcamp/terminal
+(base) bobtenuta@MacBook-Pro ~ % cd /users/bobtenuta/desktop/softwarebootcamp/terminal
+(base) bobtenuta@MacBook-Pro terminal % mkdir learn_git_again
+(base) bobtenuta@MacBook-Pro terminal % cd learn_git_again
+(base) bobtenuta@MacBook-Pro learn_git_again % touch third.txt
+(base) bobtenuta@MacBook-Pro learn_git_again % git init
+Initialized empty Git repository in /Users/bobtenuta/Desktop/SoftwareBootcamp/Terminal/learn_git_again/.git/
+(base) bobtenuta@MacBook-Pro learn_git_again % git add third.txt
+(base) bobtenuta@MacBook-Pro learn_git_again % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   third.txt
+
+(base) bobtenuta@MacBook-Pro learn_git_again % git commit -m "adding third.txt"
+[main (root-commit) dabf193] adding third.txt
+ Committer: Bob Tenuta <bobtenuta@MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+(base) bobtenuta@MacBook-Pro learn_git_again % touch fourth.txt
+(base) bobtenuta@MacBook-Pro learn_git_again % git add fourth.txt
+(base) bobtenuta@MacBook-Pro learn_git_again % git commit -m "adding fourth.txt"
+[main 991f20e] adding fourth.txt
+ Committer: Bob Tenuta <bobtenuta@MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+(base) bobtenuta@MacBook-Pro learn_git_again % ls
+fourth.txt	third.txt
+(base) bobtenuta@MacBook-Pro learn_git_again % rm third.txt
+(base) bobtenuta@MacBook-Pro learn_git_again % git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    third.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) bobtenuta@MacBook-Pro learn_git_again % add rm third.txt
+zsh: command not found: add
+(base) bobtenuta@MacBook-Pro learn_git_again % git add rm third.txt
+fatal: pathspec 'rm' did not match any files
+(base) bobtenuta@MacBook-Pro learn_git_again % git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    third.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) bobtenuta@MacBook-Pro learn_git_again % get add
+zsh: command not found: get
+(base) bobtenuta@MacBook-Pro learn_git_again % git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+(base) bobtenuta@MacBook-Pro learn_git_again % git add .
+(base) bobtenuta@MacBook-Pro learn_git_again % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    third.txt
+
+(base) bobtenuta@MacBook-Pro learn_git_again % git commit -m "removing third.txt"
+[main 045bf11] removing third.txt
+ Committer: Bob Tenuta <bobtenuta@MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+(base) bobtenuta@MacBook-Pro learn_git_again % git log
+commit 045bf111f612e6eb5c4d76bbd1b63dd76cd29e27 (HEAD -> main)
+Author: Bob Tenuta <bobtenuta@MacBook-Pro.local>
+Date:   Fri Feb 3 19:17:27 2023 -0500
+
+    removing third.txt
+
+commit 991f20ef95cc2a64168732ae1f5c6ddb83b56117
+Author: Bob Tenuta <bobtenuta@MacBook-Pro.local>
+Date:   Fri Feb 3 19:12:19 2023 -0500
+
+    adding fourth.txt
+
+commit dabf193ad4727be1864292f591493ee7fc5fdd57
+Author: Bob Tenuta <bobtenuta@MacBook-Pro.local>
+Date:   Fri Feb 3 19:11:37 2023 -0500
+
+    adding third.txt
+(base) bobtenuta@MacBook-Pro learn_git_again % git config --global core.pager=cat
+error: invalid key: core.pager=cat
+(base) bobtenuta@MacBook-Pro learn_git_again % git config --global core.pager=cat ~
+error: invalid key: core.pager=cat
+(base) bobtenuta@MacBook-Pro learn_git_again % git config --global core.pager cat
+(base) bobtenuta@MacBook-Pro learn_git_again % git status
+On branch main
+nothing to commit, working tree clean
+(base) bobtenuta@MacBook-Pro learn_git_again % git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+(base) bobtenuta@MacBook-Pro learn_git_again % git config --global --list
+core.pager=cat
+(base) bobtenuta@MacBook-Pro learn_git_again % 
