@@ -1,0 +1,56 @@
+(base) bobtenuta@MacBook-Pro learn_git_again % cd ..
+(base) bobtenuta@MacBook-Pro terminal % ls
+app.js		index.html	learn_git_again
+(base) bobtenuta@MacBook-Pro terminal % mkdir branch_time
+(base) bobtenuta@MacBook-Pro terminal % cd branch_time
+(base) bobtenuta@MacBook-Pro branch_time % git init
+Initialized empty Git repository in /Users/bobtenuta/Desktop/SoftwareBootcamp/Terminal/branch_time/.git/
+(base) bobtenuta@MacBook-Pro branch_time % touch first.txt
+(base) bobtenuta@MacBook-Pro branch_time % git add first.txt
+(base) bobtenuta@MacBook-Pro branch_time % git commit -m "adding first.txt"
+[main (root-commit) 661d7b1] adding first.txt
+ Committer: Bob Tenuta <bobtenuta@MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first.txt
+(base) bobtenuta@MacBook-Pro branch_time % git checkout -b amazing_feature
+Switched to a new branch 'amazing_feature'
+(base) bobtenuta@MacBook-Pro branch_time % touch best.txt
+(base) bobtenuta@MacBook-Pro branch_time % git add best.txt
+(base) bobtenuta@MacBook-Pro branch_time % git commit -m "added best.txt"
+[amazing_feature 2ffd535] added best.txt
+ Committer: Bob Tenuta <bobtenuta@MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 best.txt
+(base) bobtenuta@MacBook-Pro branch_time % git checkout main
+Switched to branch 'main'
+(base) bobtenuta@MacBook-Pro branch_time % git merge amazing_feature
+Updating 661d7b1..2ffd535
+Fast-forward
+ best.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 best.txt
+(base) bobtenuta@MacBook-Pro branch_time % git branch -d amazing_feature
+Deleted branch amazing_feature (was 2ffd535).
+(base) bobtenuta@MacBook-Pro branch_time % 
