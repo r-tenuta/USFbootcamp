@@ -1,0 +1,32 @@
+What is HTTP?
+HTTP (Hypertext Transfer Protocol) is a protocol used for communication between web servers and clients, typically web browsers. It is the foundation of data communication for the World Wide Web.
+
+What is a URL?
+A URL (Uniform Resource Locator) is a web address that specifies the location of a resource on the internet, such as a web page, image, or video.
+
+What is DNS?
+DNS (Domain Name System) is a system that translates domain names into IP addresses, which are used to identify and locate web servers on the internet. When you type a domain name into your web browser, DNS is responsible for finding the IP address associated with that domain name.
+
+What is a query string?
+A query string is a part of a URL that contains data that is sent to the server as part of an HTTP request. It typically includes a key-value pair, separated by an equal sign, and multiple pairs are separated by an ampersand. Query strings are often used to pass information from a web page to a server.
+
+What are two HTTP verbs and how are they different?
+Two common HTTP verbs are GET and POST. GET is used to retrieve information from a server, while POST is used to submit information to a server for processing.
+
+What is an HTTP request?
+An HTTP request is a message sent by a client, typically a web browser, to a web server, requesting a resource such as a web page or image.
+
+What is an HTTP response?
+An HTTP response is a message sent by a web server to a client in response to an HTTP request. It contains the requested resource, along with additional information such as status codes and headers.
+
+What is an HTTP header? Give a couple examples of request and response headers you have seen.
+An HTTP header is a part of an HTTP request or response that provides additional information about the request or response. Examples of request headers include User-Agent, which provides information about the web browser making the request, and Referer, which indicates the URL of the web page that contained the link that was followed to arrive at the current page. Examples of response headers include Content-Type, which indicates the type of data contained in the response, and Cache-Control, which specifies how long the response should be cached by the client.
+
+What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+
+The browser parses the URL to extract the protocol, domain name, and path.
+The browser sends a DNS request to translate the domain name into an IP address.
+The browser establishes a TCP connection to the server using the IP address and port number specified in the URL.
+The browser sends an HTTP request to the server, requesting the resource specified in the path of the URL.
+The server receives the request, processes it, and sends an HTTP response back to the browser, containing the requested resource.
+The browser receives the response, parses it, and renders the web page or displays the resource to the user.
